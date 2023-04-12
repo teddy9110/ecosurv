@@ -37,6 +37,7 @@ export default () => {
     setbreed(e.target.value)
     setSubBreedoptions(breeds)
     setSubBreed(Object.keys(breeds)[0])
+    setNumber(1)
   };
 
   const subBreedChange = (e) => {
@@ -107,7 +108,7 @@ export default () => {
             />
           </div>
           <div class=" md:w-3/12 px-3 mb-6 md:mb-0 inline-block align-middle">
-            <button class="bg-blue-500 align-middle hover:bg-blue-700 text-white font-bold py-2 px-4 align-middle rounded" onClick={getImages}>
+            <button class="bg-blue-500 align-middle hover:bg-blue-700 text-white font-bold py-2 px-4 items-center align-middle rounded" onClick={getImages}>
               View Images
             </button>
           </div>
@@ -138,7 +139,7 @@ export default () => {
             />
           </div>
           <div class=" md:w-3/12 px-3 mb-6 md:mb-0 inline-block align-middle">
-            <button class="bg-blue-500 align-middle hover:bg-blue-700 text-white font-bold py-2 px-4 align-middle rounded" onClick={getImages}>
+            <button class="bg-blue-500 align-middle hover:bg-blue-700 text-white font-bold py-2 px-4 align-middle items-center rounded" onClick={getImages}>
               View Images
             </button>
           </div>
@@ -147,7 +148,7 @@ export default () => {
       <div class="flex flex-wrap -mx-3 mb-6">
         {images ? (
              Object.values(images).map((item, i) => (
-              <img src={item} key={i} class="object-cover max-w-sm rounded p-4" /> 
+              <img src={item} key={i} class="object-cover max-wh-med rounded p-4" /> 
             ))
         ): null}
       </div>
